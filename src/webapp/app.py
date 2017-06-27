@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!/usr/bin/env python
 import sys
 import subprocess
 from flask import Flask, jsonify, render_template, request, redirect, url_for

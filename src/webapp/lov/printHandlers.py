@@ -28,7 +28,7 @@ def print_agent(results, target, isHtml, metadata=None):
         if metadata:
             literal = metadata.format(literal)
         if isHtml:
-            print "<p><a href='http://lov.okfn.org/dataset/lov/agents/"\
+            print "<p><a href='http://localhost:3333/dataset/bdo/agents/"\
                   + urllib.quote(literal, safe='')+"'>"+literal+"</a></p>"
         else:
             print literal
@@ -40,7 +40,7 @@ def print_category(results, target, isHtml, metadata=None):
         if metadata:
             literal = metadata.format(literal)
         if isHtml:
-            print "<p><a href='http://lov.okfn.org/dataset/lov/vocabs?tag=" \
+            print "<p><a href='http://localhost:3333/dataset/bdo/vocabs?tag=" \
                   + urllib.quote(literal, safe='') + "'>" + literal + "</a></p>"
         else:
             print literal
@@ -52,7 +52,7 @@ def print_lang(results, target, isHtml, metadata=None):
         if metadata:
             literal = metadata.format(literal)
         if isHtml:
-            print "<p><a href='http://lov.okfn.org/dataset/lov/vocabs?lang=" \
+            print "<p><a href='http://localhost:3333/dataset/bdo/vocabs?lang=" \
                   + urllib.quote(literal, safe='') + "'>" + literal + "</a></p>"
         else:
             print literal

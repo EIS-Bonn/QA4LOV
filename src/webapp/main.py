@@ -12,7 +12,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import lov.printHandlers as printHandlers
 
 # using directly the LOV endpoint to query
-sparql = SPARQLWrapper("http://lov.okfn.org/dataset/lov/sparql")
+sparql = SPARQLWrapper("http://localhost:3030/bigdataocean/query")
 
 lov = quepy.install("lov")
 
@@ -32,7 +32,7 @@ def vocaburi(vocab_url):
     results = sparql.query().convert()
 
     if not results["results"]["bindings"]:
-        print "Snorql URL not found"
+        print ("Snorql URL not found")
         sys.exit(1)
     else:
         return results["results"]["bindings"][0]["uri"]["value"]
@@ -63,21 +63,23 @@ if __name__ == "__main__":
     parser.add_argument('--d', action='store_true', help='Set log level to Debug')
     args = parser.parse_args()
 
-    # print('q: '+args.q)
-    # print('html: '+str(args.html))
-    # print('d: '+str(args.d))
+    #print('q: '+str(args.q))
+    #print('html: '+str(args.html))
+    #print('d: '+str(args.d))
     if args.d:
         quepy.set_loglevel("DEBUG")
 
     if len(args.q) > 1:
         question = args.q
         if question.count("http"):
-            print vocaburi(question)
+            print (vocaburi(question))
             sys.exit(0)
         else:
             questions = [question]
+            #print('question: '+question)
     else:
         questions = default_questions
+        #print('questions: '+questions)
 
     print_handlers = {
         "define": printHandlers.print_define,
@@ -105,7 +107,7 @@ if __name__ == "__main__":
             metadata = None
 
         if query is None:
-            print "Sorry. I don't understand your question...\n"
+            print ("Sorry. I don't understand your question...\n")
             continue
 
         #print query
@@ -118,7 +120,7 @@ if __name__ == "__main__":
             results = sparql.query().convert()
 
             if not results["results"]["bindings"]:
-                print "Sorry. I am not able to answer your question..."
+                print ("Sorry. I am not able to answer your question...")
                 continue
 
         print_handlers[query_type](results, target, args.html, metadata)
