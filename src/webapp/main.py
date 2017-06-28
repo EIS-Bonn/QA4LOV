@@ -12,7 +12,7 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import lov.printHandlers as printHandlers
 
 # using directly the LOV endpoint to query
-sparql = SPARQLWrapper("http://localhost:3030/bigdataocean/query")
+sparql = SPARQLWrapper("http://localhost:3030/bigdataocean/sparql")
 
 lov = quepy.install("lov")
 
