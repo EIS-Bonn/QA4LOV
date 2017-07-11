@@ -12,7 +12,7 @@ Settings.
 LANGUAGE = "sparql"
 
 # NLTK config
-NLTK_DATA_PATH = ['/root/BDO/QA4LOV/src/webapp/nltk_data']  # List of paths with NLTK data
+NLTK_DATA_PATH = ['/BDO/QA4LOV/src/webapp/nltk_data']  # List of paths with NLTK data
 
 # Encoding config
 DEFAULT_ENCODING = "utf-8"
