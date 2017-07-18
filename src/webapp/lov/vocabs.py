@@ -101,6 +101,15 @@ class WhatCategory(QuestionTemplate):
         category = dsl.HasCategory(match.vocabulary)
         return category, "category"
 
+class WhatPilot(QuestionTemplate):
+    """
+    Ex: "What is the pilot of foaf?"
+    """
+    regex = Lemma("what") + Lemma("be") + Lemma("the") + Lemma("pilot") + Pos("IN") + Vocabulary() + Question(Pos("."))
+
+    def interpret(self, match):
+        pilot = dsl.HasPilot(match.vocabulary)
+        return pilot, "pilot"
 
 # confusing. How to distinguish with namespace?
 class WhatIsTitleQuestion(QuestionTemplate):

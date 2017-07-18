@@ -32,5 +32,6 @@ PREFIX vann:<http://purl.org/vocab/vann/>
 PREFIX voaf:<http://purl.org/vocommons/voaf#>
 PREFIX dcterms:<http://purl.org/dc/terms/>
 PREFIX dcat:<http://www.w3.org/ns/dcat#>
+PREFIX lov:  <http://localhost:3333/dataset/bdo/>
 
 """

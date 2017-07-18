@@ -59,6 +59,10 @@ class HasCategory(FixedRelation):
     relation = "dcat:keyword"
     reverse = True
 
+class HasPilot(FixedRelation):
+    relation = "lov:pilot"
+    reverse = True
+
 
 class ReleaseDateOf(FixedRelation):
     relation = "dcterms:issued"

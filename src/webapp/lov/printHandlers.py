@@ -33,6 +33,17 @@ def print_agent(results, target, isHtml, metadata=None):
         else:
             print literal
 
+def print_pilot(results, target, isHtml, metadata=None):
+    for result in results["results"]["bindings"]:
+        literal = result[target]["value"]
+        if metadata:
+            literal = metadata.format(literal)
+        if isHtml:
+            print "<p><a href='http://localhost:3333/dataset/bdo/pilots/"\
+                  + urllib.quote(literal, safe='')+"'>"+literal+"</a></p>"
+        else:
+            print literal
+
 
 def print_category(results, target, isHtml, metadata=None):
     for result in results["results"]["bindings"]:

@@ -89,7 +89,8 @@ if __name__ == "__main__":
         "lang": printHandlers.print_lang,
         "enum": printHandlers.print_enum,
         "age": printHandlers.print_age,
-        "literal": printHandlers.print_literal
+        "literal": printHandlers.print_literal,
+        "pilot": printHandlers.print_pilot
     }
 
     for question in questions:
