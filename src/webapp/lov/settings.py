@@ -28,10 +28,10 @@ PREFIX quepy: <http://www.machinalis.com/quepy#>
 PREFIX dbpedia: <http://dbpedia.org/ontology/>
 PREFIX dbpprop: <http://dbpedia.org/property/>
 PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
-PREFIX vann:<http://purl.org/vocab/vann/>
-PREFIX voaf:<http://purl.org/vocommons/voaf#>
-PREFIX dcterms:<http://purl.org/dc/terms/>
-PREFIX dcat:<http://www.w3.org/ns/dcat#>
-PREFIX lov:  <http://localhost:3333/dataset/bdo/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX voaf: <http://purl.org/vocommons/voaf#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX lov: <http://212.101.173.34:3333/dataset/bdo/>
 
 """
